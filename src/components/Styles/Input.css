@@ -1,0 +1,94 @@
+.input {
+    min-width: 700px;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#section-1{
+    min-width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   background: #ffffff;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    padding-right: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 2px solid #E5E7EB;
+    
+}
+.shareweb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+#section-2{
+    background: #ffffff;
+    min-width: 700px;
+    max-width: 700px;
+    padding: 20px 20px;
+    border-bottom: 2px solid #E5E7EB;
+}
+.input-div{
+    display: flex;
+    min-width: 660px;
+    border: 2px solid #D1D5DB;
+    border-radius: 9px;
+}
+.input-div input{
+    border-left: 2px solid #D1D5DB;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+    min-width: 560px;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    font-size: 20px;
+    
+}
+.input-div button{
+    border-right: 2px solid #D1D5DB;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    width: 100px;
+    height: 50px;
+    border: none;
+    font-size: 22px;
+    color: #374151;
+}
+.oslash{
+    max-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.oslash-logo{
+    display: flex;
+    align-items: center;
+}
+.oslash-logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+#section-3{
+    width: 700px;
+    max-width: 800px;
+    min-height:70px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 35px;
+    background-color: #f1f2f6;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

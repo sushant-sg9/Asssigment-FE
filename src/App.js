@@ -1,24 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import Search from './components/Search';
+import { createContext, useEffect, useState } from 'react';
+import Input from './components/Input';
+import { Routes } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import {HiShare} from "react-icons/hi"
+export const Context = createContext();
 
 function App() {
+  const [user,setUser] = useState({});
+  const [set,setSet] = useState(new Set());
+  const [arr,setArr] = useState([]);
+  const [display,setDisplay] = useState("none");
+  useEffect(()=>{
+    
+      if(set.has(user.name)||!user.name) return;
+      set.add(user.name);
+      setArr([...arr,user]);
+  
+  },[user])
+  
   return (
+    <>
+    <Context.Provider value={{user,setUser,arr}}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Click on Share Button</h2>
+      <button onClick={()=>setDisplay("block")} id='share'>Share &nbsp;<HiShare/></button>
+      <Routes>
+      <Route path='/' element={<Input display={display}/>}/>
+      <Route path='/add' element={<Search/>} />
+      </Routes>
     </div>
+      </Context.Provider>
+      </>
   );
 }
 
